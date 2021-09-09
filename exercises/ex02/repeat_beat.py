@@ -11,10 +11,9 @@ if (int_repeat <= 0):
     print("No beat...")
 else:    
     while int_repeat > 0:
-        if (int_repeat == 0):
-            to_print += beat
-        else:
+        if (int_repeat > 0):
             to_print += beat + " "
             int_repeat -= 1
+        else:
+            to_print += beat
     print(to_print)
-
