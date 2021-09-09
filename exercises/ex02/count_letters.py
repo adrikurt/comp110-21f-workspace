@@ -3,7 +3,6 @@
 __author__ = "730395502"
 
 
-
 letter: str = input("What letter do you want to search for?: ")
 word: str = input("Enter a word: ")
 index_value = 0 
