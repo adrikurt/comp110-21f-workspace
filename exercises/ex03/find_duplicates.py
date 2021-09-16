@@ -5,7 +5,6 @@ __author__ = "730395502"
 
 word: str = input("Enter a word: ")
 i: int = 0
-j: int = i + 1
 dup: bool = False
 while i < len(word):
     char = word[i]
@@ -15,4 +14,4 @@ while i < len(word):
             dup = bool = True
         j += 1
     i += 1
-print("Found duplicate: " +str(dup))
+print("Found duplicate: " + str(dup))
