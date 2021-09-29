@@ -1,4 +1,4 @@
-"""Choose Your Own Adventure Project"""
+"""Choose Your Own Adventure Project."""
 
 __author__ = "730395502"
 
@@ -23,6 +23,7 @@ def greet() -> None:
     print(f"Hello {player}, welcome to the animal shelter game.")
     print("In this game you will choose an animal you want to adopt and take care of it.")
 
+
 def choose(choice: str) -> str:
     """Allows player to pick which pet they want."""
     int_choice = int(choice)
@@ -38,6 +39,7 @@ def choose(choice: str) -> str:
     points += 1
     return(pet)
     
+
 def name() -> None:
     """Player can name their pet."""
     print(f"{player}, you will now choose a name for your pet.")
@@ -45,6 +47,7 @@ def name() -> None:
     print(f"{pet_name} is a great choice. Well done!")
     global points
     points += 1
+
 
 def feed(food: int) -> int:
     """Allows player to feed their pet."""
@@ -74,6 +77,7 @@ def feed(food: int) -> int:
         print(f"{player}, this food was not good for your pet. It has a stomach ache.")
     return(parameter)
 
+
 def main() -> None: 
     """The program's entrypoint."""
     global points
@@ -88,9 +92,9 @@ def main() -> None:
     while int_path > 1:
         if int_path == 2:
             name()
-            print (f"You have accumulated {points} points. Good job!")
+            print(f"You have accumulated {points} points. Good job!")
             print("You have three options to proceed. Please type the number corresponding to the option you want to pick.")
-            path: str = input("1.End Game   2.Name Pet   3.Feed Pet ")
+            path = input("1.End Game   2.Name Pet   3.Feed Pet ")
             int_path = int(path)
         else:
             print("You can now feed your pet. You will gain or loose points based on whether the food is appropriate for the type of animal your pet is.")
@@ -98,13 +102,14 @@ def main() -> None:
             food_path: str = input("1.Feed your pet a typical food. 2.Feed your pet a random food. ")
             int_food_path = int(food_path)
             points = feed(int_food_path) + points
-            print (f"You have accumulated {points} points. Good job!")
+            print(f"You have accumulated {points} points. Good job!")
             print("You have three options to proceed. Please type the number corresponding to the option you want to pick.")
-            path: str = input("1.End Game   2.Name Pet   3.Feed Pet ")
+            path = input("1.End Game   2.Name Pet   3.Feed Pet ")
             int_path = int(path)
     else:
         print(f"{player}, thank you for playing the animal shelter game.")
-    print (f"You have accumulated {points} points. Good job!")
+    print(f"You have accumulated {points} points. Good job!")
+
 
 if __name__ == "__main__":
     main()
