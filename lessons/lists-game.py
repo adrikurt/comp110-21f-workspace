@@ -2,15 +2,15 @@
 
 from random import randint
 
-rolls: list[int] = list ()
+rolls: list[int] = list()
 
-while len(rolls) == 0 or rolls[len(rolls)-1] != 1:
+while len(rolls) == 0 or rolls[len(rolls) - 1] != 1:
     rolls.append(randint(1, 6))
 
 print(rolls)
 
 # Remove an item from the list by its index ("pop")
-rolls.pop(len(rolls)-1)
+rolls.pop(len(rolls) - 1)
 print(rolls)
 
 # Sum the values of our rolls!
